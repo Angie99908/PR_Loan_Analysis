@@ -36,10 +36,12 @@ This is a project which analyzes loan data for Udacity.
 
 > Select one or two main threads from your exploration to polish up for your presentation. Note any changes in design from your exploration step here.
 > The loans with occupation listed as 'Other' seemed to be at risk for default.
+> Some states had higher rates of default than others.  There were loans where a state wasn't even present in the data.
 
 
 
 ## Sites visuted during analysis
->https://stackoverflow.com/questions/38134012/pandas-dataframe-fillna-only-some-columns-in-place
+> https://stackoverflow.com/questions/38134012/pandas-dataframe-fillna-only-some-columns-in-place
 > https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.nlargest.html
-
+> https://www.kaggle.com/xdurana/multivariate-analysis-and-correlation-matrix
+> https://datatofish.com/statsmodels-linear-regression/
