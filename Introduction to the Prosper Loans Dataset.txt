@@ -1,0 +1,68 @@
+Introduction to the Prosper Loans Dataset
+
+The Securities Act of 1933 requires securities, or “tradable financial assets”, be registered with the SEC.(1).  The goal of this legislation was to protect shareholders by mandating they be fully informed about all relevant data associated with their investment. It is not illegal to sell someone a bad loan, but it is illegal to withhold information showing that it is a bad investment.(2).  For the purposes of this Prosper data analysis report, securities are the loans provided to consumers by Prosper Marketplace, Inc. subsidiary Prosper Funding, LLC.(3).
+
+There are specific exemptions which allow securities to be traded without registering with the SEC.  The securities may be exempt if they are traded within the borders of a state.  Once the trade crosses state lines, the security must be registered. Government securities can be exempt from registration, as well as offerings which are limited in size.(2). In November of 2008, the SEC court ordered Prosper to stop lending because it’s business practices were in violation of the Securities Act of 1933.  The Prosper loans division was allowed to resume business practices in July of 2009, after remediation activities.
+
+Purchasers of loans between 2006 and 2008 filed a class action lawsuit against Prosper for selling “unregistered loans”, which Prosper did actually do  according to the SEC.  Did Prosper hide the fact the loans were unregistered, or did people just assume they were?  The suit also alleges “unqualified loans”, which is a loan that doesn’t meet strict requirements.  Again, did Prosper conceal data from purchasers? The purchasers were involved in loans using a new online bidding process. What data did the purchasers have regarding the loans?  Again, the Securities Act says you can sell risky loans, you just can’t conceal the risk.
+
+The Prosper dataset has 81 columns of data. One of the big questions in this analysis concerns whether or not the missing data in the years prior to the 2009 SEC cease and desist order correlated with daefaulted loans.  Were the investors missing data which could have shown them they were making a risky investment?
+
+
+https://en.wikipedia.org/wiki/Security_(finance)
+https://en.wikipedia.org/wiki/Securities_Act_of_1933
+https://en.wikipedia.org/wiki/Prosper_Marketplace
+
+
+
+# PR_Loan_Analysis
+This is a project which analyzes loan data for Udacity.
+# Prosper Loan Data Exploration
+## by Angie Koepcke
+
+
+## Dataset
+
+> The Prosper Loan data set contains loan data for various types of loans from 2005-2014. The data file was provided by Udacity.
+
+> The first step I completed was to upload the 'prosperLoanData.csv' file to my project folder in my jupyter notebook.  This way I could run .head() and .info() on the data and get an idea of what I was looking at.  I opened the Prosper Loan Data variable definitions in Google sheets.
+
+> I also check to make sure all the packages I needed for this project were installed.  It turned out I had to install Seaborn, so I did this in Linux. After installing Seaborn, I checked the data using .head() and .info(). 
+
+> There were 80 columns and 113,937 rows of data in the loan data file.  I had to decide which variables I wanted to explore.  The loan listing category, which classifies what the loan was for, and the state interested me right away.  Beyond that, I decided I needed to do more exploration and make some decisions. 
+
+> There were rows with duplicated data, so I decided to drop the rows. I ran code to see which columns were involved in the data duplication, and dropped the rows based on the 'ListingNumber' column.
+
+> Some of the columns weren't in an ideal format for analysis.  I changed some object columns to datetime so I could analyze data across time periods.  These columns included, 'ListingCreationDate', 'DateCreditPulled', 'ClosedDate', and 'LoanOriginationDate'.  Doing this allowed me to see that this data creation ranges were between the years 2005 to 2014.
+
+
+## Summary of Findings
+
+> Summarize all of your findings from your exploration here, whether you plan on bringing them into your explanatory presentation or not.
+
+> California Texas, New York, Florida and Illinois had the most loans with Prosper. There were 112,239 unique loans listings. There were over 5,000 loans which didn't provide the data for the state.  The 'BorrowerState' is a nominal, categorical variable in this anaylsis.
+
+> The loans ranged in terms from 12 to 60 months. The approximate average length of a Prosper Loan is 41 months.
+
+>
+> It appeared that the borrowers occupation being listed as 'Other' was correlated with more net losses on loans.
+>
+
+
+## Key Insights for Presentation
+
+> Select one or two main threads from your exploration to polish up for your presentation. Note any changes in design from your exploration step here.
+> The loans with occupation listed as 'Other' seemed to be at risk for default.
+> Some states had higher rates of default than others.  There were loans where a state wasn't even present in the data.
+
+
+
+## Sites visuted during analysis
+> https://stackoverflow.com/questions/38134012/pandas-dataframe-fillna-only-some-columns-in-place
+> https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.nlargest.html
+> https://www.kaggle.com/xdurana/multivariate-analysis-and-correlation-matrix
+> https://datatofish.com/statsmodels-linear-regression/
+> https://stackoverflow.com/questions/38082602/plotting-multiple-different-plots-in-one-figure-using-seaborn/38091681
+> https://statistics.laerd.com/statistical-guides/types-of-variable.php
+> https://stackoverflow.com/questions/42123847/create-new-pandas-column-based-on-categorical-values-in-other-column-python
+> https://www.geeksforgeeks.org/python-creating-a-pandas-dataframe-column-based-on-a-given-condition/?ref=rp
